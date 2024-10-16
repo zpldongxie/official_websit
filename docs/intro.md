@@ -2,46 +2,46 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 教程简介
 
-Let's discover **Docusaurus in less than 5 minutes**.
+让我们在**不到5分钟**内发现Docusaurus。
 
-## Getting Started
+## 开始
 
-Get started by **creating a new site**.
+开始创建**一个新网站**。
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+或者使用**[docusaurus.new](https://docusaurus.new)**立即**尝试Docusaurus**。
 
-### What you'll need
+### 你需要什么
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [Node.js](https://nodejs.org/en/download/)版本18.0或更高：
+  - 安装Node.js时，建议你检查所有与依赖项相关的复选框。
 
-## Generate a new site
+## 生成新网站
 
-Generate a new Docusaurus site using the **classic template**.
+使用**经典模板**生成一个新的Docusaurus网站。
 
-The classic template will automatically be added to your project after you run the command:
+在你运行以下命令后，经典模板将自动添加到你的项目中：
 
 ```bash
 npm init docusaurus@latest my-website classic
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+你可以在Command Prompt、Powershell、Terminal或代码编辑器的任何集成终端中输入这条命令。
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+这条命令还会安装你运行Docusaurus所需的所有必要依赖项。
 
-## Start your site
+## 启动你的网站
 
-Run the development server:
+运行开发服务器：
 
 ```bash
 cd my-website
 npm run start
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+`cd`命令更改了你工作的目录。为了与你的新创建的Docusaurus网站一起工作，你需要导航到终端那里。
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+`npm run start`命令在本地构建你的网站，并通过开发服务器为你提供服务，准备在http://localhost:3000/上查看。
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+打开`docs/intro.md`（这一页）并编辑一些行：网站**自动重新加载**并显示你的更改。

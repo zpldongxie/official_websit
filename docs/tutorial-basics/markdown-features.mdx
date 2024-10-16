@@ -2,64 +2,63 @@
 sidebar_position: 4
 ---
 
-# Markdown Features
+# Markdown 特性
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
+Docusaurus 支持 **[Markdown](https://daringfireball.net/projects/markdown/syntax)** 和一些 **额外特性**。
 
-## Front Matter
+## 前言
 
-Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
+Markdown 文档的顶部有一个叫做 [前言](https://jekyllrb.com/docs/front-matter/) 的元数据：
 
 ```text title="my-doc.md"
 // highlight-start
 ---
 id: my-doc-id
-title: My document title
-description: My document description
+title: 我的文档标题
+description: 我的文档描述
 slug: /my-custom-url
 ---
 // highlight-end
 
-## Markdown heading
+## Markdown 标题
 
-Markdown text with [links](./hello.md)
-```
+带有 [链接](./hello.md) 的 Markdown 文本
 
-## Links
+## 链接
 
-Regular Markdown links are supported, using url paths or relative file paths.
-
-```md
-Let's see how to [Create a page](/create-a-page).
-```
+支持常规的 Markdown 链接，使用 URL 路径或相对文件路径。
 
 ```md
-Let's see how to [Create a page](./create-a-page.md).
+让我们看看如何 [创建一个页面](/create-a-page)。
 ```
-
-**Result:** Let's see how to [Create a page](./create-a-page.md).
-
-## Images
-
-Regular Markdown images are supported.
-
-You can use absolute paths to reference images in the static directory (`static/img/docusaurus.png`):
 
 ```md
-![Docusaurus logo](/img/docusaurus.png)
+让我们看看如何 [创建一个页面](./create-a-page.md)。
 ```
 
-![Docusaurus logo](/img/docusaurus.png)
+**结果:** 让我们看看如何 [创建一个页面](./create-a-page.md)。
 
-You can reference images relative to the current file as well. This is particularly useful to colocate images close to the Markdown files using them:
+## 图像
+
+支持常规的 Markdown 图像。
+
+可以使用静态目录中的绝对路径来引用图像 (`static/img/docusaurus.png`):
 
 ```md
-![Docusaurus logo](./img/docusaurus.png)
+![Docusaurus 标志](/img/docusaurus.png)
 ```
 
-## Code Blocks
+![Docusaurus 标志](/img/docusaurus.png)
 
-Markdown code blocks are supported with Syntax highlighting.
+也可以相对于当前文件引用图像，这对于将图像与使用它们的 Markdown 文件一起存储非常有用：
+
+```md
+![Docusaurus 标志](./img/docusaurus.png)
+```
+
+## 代码块
+
+支持带有语法高亮的 Markdown 代码块。
 
 ````md
 ```jsx title="src/components/HelloDocusaurus.js"
@@ -75,39 +74,39 @@ function HelloDocusaurus() {
 }
 ```
 
-## Admonitions
+## 警示
 
-Docusaurus has a special syntax to create admonitions and callouts:
+Docusaurus 有一个特殊的语法来创建警示和提示：
 
 ```md
-:::tip My tip
+:::tip 我的提示
 
-Use this awesome feature option
+使用这个很棒的特性选项
 
 :::
 
-:::danger Take care
+:::danger 注意
 
-This action is dangerous
+这个操作是危险的
 
 :::
 ```
 
-:::tip My tip
+:::tip 我的提示
 
-Use this awesome feature option
-
-:::
-
-:::danger Take care
-
-This action is dangerous
+使用这个很棒的特性选项
 
 :::
 
-## MDX and React Components
+:::danger 注意
 
-[MDX](https://mdxjs.com/) can make your documentation more **interactive** and allows using any **React components inside Markdown**:
+这个操作是危险的
+
+:::
+
+## MDX 和 React 组件
+
+[MDX](https://mdxjs.com/) 可以使你的文档更加 **交互**，并允许在 Markdown 中使用任何 **React 组件**：
 
 ```jsx
 export const Highlight = ({children, color}) => (
@@ -120,33 +119,12 @@ export const Highlight = ({children, color}) => (
       cursor: 'pointer',
     }}
     onClick={() => {
-      alert(`You clicked the color ${color} with label ${children}`)
+      alert(`你点击了颜色 ${color} 的标签 ${children}`)
     }}>
     {children}
   </span>
 );
 
-This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+这是 <Highlight color="#25c2a0">Docusaurus 绿色</Highlight> !
 
-This is <Highlight color="#1877F2">Facebook blue</Highlight> !
-```
-
-export const Highlight = ({children, color}) => (
-  <span
-    style={{
-      backgroundColor: color,
-      borderRadius: '20px',
-      color: '#fff',
-      padding: '10px',
-      cursor: 'pointer',
-    }}
-    onClick={() => {
-      alert(`You clicked the color ${color} with label ${children}`);
-    }}>
-    {children}
-  </span>
-);
-
-This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
-
-This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+这是 <Highlight color="#1877F2">Facebook 蓝色</Highlight> !

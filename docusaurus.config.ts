@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: '兴教云',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/icon.png',
 
   // 设置你的网站的生产环境URL
   url: 'https://www.xingjiaoyun.com/',
