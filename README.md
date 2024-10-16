@@ -4,13 +4,13 @@
 
 ### 安装
 
-```
+```bash
 $ yarn
 ```
 
 ### 本地开发
 
-```
+```bash
 $ yarn start
 ```
 
@@ -18,7 +18,7 @@ $ yarn start
 
 ### 构建
 
-```
+```bash
 $ yarn build
 ```
 
@@ -28,14 +28,16 @@ $ yarn build
 
 使用 SSH：
 
-```
+```bash
 $ USE_SSH=true yarn deploy
 ```
 
 不使用 SSH：
 
-```
+```bash
 $ GIT_USER=<您的 GitHub 用户名> yarn deploy
+# windows执行
+$env:GIT_USER="zpldongxie"; yarn deploy
 ```
 
 如果您使用 GitHub 页作为托管， 此命令是一个方便的方式来构建网站并推送到 `gh-pages` 分支。

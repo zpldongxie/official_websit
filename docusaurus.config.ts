@@ -10,7 +10,7 @@ const config: Config = {
   url: 'https://www.xingjiaoyun.com/',
   // 设置你的网站在/<baseUrl>/路径下被服务的路径
   // 对于GitHub Pages部署，这通常是'/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/official_websit/',
 
   // GitHub Pages部署配置。
   // 如果你不使用GitHub Pages，你不需要这些。
