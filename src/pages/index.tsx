@@ -1,7 +1,7 @@
 import { Carousel, FloatButton } from 'antd';
 import Layout from '@theme/Layout';
 
-import styles from './index.module.css';
+import styles from './index.module.scss';
 
 const goRegister = type => {
   const host = window.location.host;
