@@ -1,6 +1,17 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
+function gitXJYLoginUrl() {
+  const href = window.location.href;
+  if (!href.includes('localhost')) {
+    const str = href.slice(href.indexOf('.') + 1);
+    const newstr = str.slice(0, str.indexOf('/'));
+
+    return '//platform.' + newstr + '/?enterprise_code=01001';
+  }
+  return 'http://platform.test.xingjiaoyun.com/sso/login';
+}
 
 const config: Config = {
   title: '兴教云',
@@ -36,8 +47,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           // 请将这改为你的仓库。
           // 移除这来移除"编辑此页面"链接。
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -47,8 +57,7 @@ const config: Config = {
           },
           // 请将这改为你的仓库。
           // 移除这来移除"编辑此页面"链接。
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // 有用的选项来强制博客最佳实践
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -62,73 +71,41 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // 用你的项目的社交卡替换
-    image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      {
+        name: 'keywords',
+        content: '兴教云,教育云,教育平台,教育云平台,智慧校园,智慧教育,数字校园,教育软件,教育软件官网',
+      },
+    ],
     navbar: {
-      title: '我的网站',
+      hideOnScroll: true,
       logo: {
-        alt: '我的网站Logo',
-        src: 'img/logo.svg',
+        alt: '兴教云Logo',
+        src: 'img/logo.png',
+        srcDark: 'img/logo_dark.png',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: '教程',
-        },
-        {to: '/blog', label: '博客', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'http://platform.xingjiaoyun.com/sso/login',
+          label: '登录',
           position: 'right',
+          target: '_blank',
+        },
+        {
+          type: 'html',
+          position: 'right',
+          value:
+            '<a href="#register" style="padding: 6px 16px; color: #fff; background-color: #0177fb; border: none; border-radius: 4px; cursor: pointer;">申请入驻</a>',
         },
       ],
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: '文档',
-          items: [
-            {
-              label: '教程',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: '社区',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: '更多',
-          items: [
-            {
-              label: '博客',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} 我的项目，Inc. 使用 Docusaurus 构建。`,
+      copyright: `
+      <p>咨询电话：029-8757 5351&nbsp;&nbsp;联系地址：陕西省西安市雁塔区丈八一路汇鑫IBC-B座</p>
+      <p>Copyright © 2015-2024 Education Promotion Cloud. All Rights Reserved &nbsp;&nbsp;由<a href="//platform.xingjiaoyun.com/sso/login" target="_1" style="text-decoration:none; color: currentColor;">兴教云</a>提供技术支持</p>
+      <p>网站备案：<a href="https://beian.miit.gov.cn/" target="_1" style="text-decoration:none; color: currentColor;">陕ICP备17016975号-2</a>&nbsp&nbsp&nbsp陕公网安备 61019002002271号</p>
+    `,
     },
     prism: {
       theme: prismThemes.github,
