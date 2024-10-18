@@ -1,5 +1,7 @@
+ html, body {
+  scrollbar-width: none;
+ }
  .briefIntroduction {
-  width: 100vw;
   padding: 0 80px;
   text-align: center;
 
@@ -86,7 +88,6 @@
 }
 
 .functionPoint {
-  width: 100vw;
   margin-top: 48px;
   padding: 0 80px;
   text-align: center;
@@ -172,14 +173,6 @@
         background-color: rgba(101, 67, 243, 1);
       }
     }
-  }
-}
-
-.bannerSlider {
-  width: 100vw;
-
-  img {
-    width: 100vw;
   }
 }
 
